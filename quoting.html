@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotation Style</title>
+  </head>
+  <body>
+    <script>
+      // Task: Replace single quotes around dialogue with double quotes
+      let storyText = "'Family' is everything.";
+
+      // Define a regular expression pattern to identify dialogue quotes
+      let dialogueQuotePattern = /(\W|^)'|'(\W|$)/gi;
+
+      // Replace single quotes around dialogue with double quotes
+      let formattedStory = storyText.replace(dialogueQuotePattern, '$1"');
+
+      console.log(formattedStory);
+    </script>
+  </body>
+</html>

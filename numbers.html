@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers Again</title>
+  </head>
+  <body>
+    <script>
+      let regexNumbers = /^[-+]?(\d+\.\d*|\.\d+|\d+)([eE][-+]?\d+)?$/;
+
+      console.log(regexNumbers.test("5")); // true
+      console.log(regexNumbers.test("-3.14")); // true
+      console.log(regexNumbers.test("1.23e-4")); // true
+      console.log(regexNumbers.test("12.3E10")); // true
+      console.log(regexNumbers.test("3.")); // true
+      console.log(regexNumbers.test(".5")); // true
+      console.log(regexNumbers.test(".")); // false (dot that is alone is invalid)
+    </script>
+  </body>
+</html>

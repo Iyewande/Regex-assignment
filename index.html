@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expressions</title>
+  </head>
+  <body>
+    <script>
+      // Task 1: Check for "car" or "cat"
+      let containsCarOrCat = /ca(r|t)/.test("car cat");
+      console.log("Task 1: " + containsCarOrCat);
+
+      // Task 2: Check for "pop" or "prop"
+      let containsPopOrProp = /pop|prop/;
+      let containsPopOrPropResult = containsPopOrProp.test("pop prop");
+      console.log("Task 2: " + containsPopOrPropResult);
+
+      // Task 3: Check for "ferret", "ferry", or "ferrari"
+      let containsFerretOrFerryOrFerrari = /ferr(et|y|ari)/;
+      let containsFerretOrFerryOrFerrariResult =
+        containsFerretOrFerryOrFerrari.test("ferret ferry ferrari");
+      console.log("Task 3: " + containsFerretOrFerryOrFerrariResult);
+
+      // Task 4: Check for any word ending in "ious"
+      let endsWithIous = /\w+ious/;
+      let endsWithIousResult = endsWithIous.test("delicious");
+      console.log("Task 4: " + endsWithIousResult);
+
+      // Task 5: Check for a whitespace character followed by a period, comma, colon, or semicolon
+      let whitespaceFollowedByPunctuation = /\s[.,:;]/;
+      let whitespaceFollowedByPunctuationResult =
+        whitespaceFollowedByPunctuation.test(" .,:;");
+      console.log("Task 5: " + whitespaceFollowedByPunctuationResult);
+
+      // Task 6: Check for any word longer than 6 letters
+      let longerThanSixLetters = /\w{7,}/;
+      let longerThanSixLettersResult = longerThanSixLetters.test("udochukwu");
+      console.log("Task 6: " + longerThanSixLettersResult);
+
+      // Task 7: Check for a word without the letter "e" (or "E")
+      let doesNotContainE = /\b[^\We]+\b/i; // Adding 'i' flag to make it case-insensitive
+      let doesNotContainEResult = doesNotContainE.test("crank");
+      console.log("Task 7: " + doesNotContainEResult);
+    </script>
+  </body>
+</html>
